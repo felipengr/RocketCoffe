@@ -18,120 +18,279 @@
     overflow-x: hidden;
 }
 
-header {
-    margin-top: 50px;
+@media only screen and (min-width: 769px) {
+
+    header {
+        margin-top: 50px;
+    }
+
+    header .nav-mobile {
+        display: none;
+    }
+
+    .main-mobile {
+        display: none;
+    }
+
+    header .nav-desk nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;  
+    }
+
+
+    header .nav-desk nav .nav-links a {
+        margin: 0 30px;
+        text-transform: none;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        justify-content: space-between;
+    }
+
+    header .nav-desk nav .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    header .nav-desk nav .btn-coffee button {
+        text-align: center;
+        width: 172px;
+        height: 37px;
+        border: 1px solid var(--button);
+        box-sizing: border-box;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        position: relative;
+        z-index: 1000;
+        background-color: transparent;
+    }
+
+    header .nav-desk nav .btn-coffee button:hover {
+        background-color: var(--button);
+    }
+
+    section.text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    section.text .text1 {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 109px;
+        letter-spacing: -0.03em;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    section.text .text2 {
+        color: var(--backgrond);
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 109px;
+        letter-spacing: -0.03em;
+        text-shadow: 
+            -1px -1px 0px var(--button),
+            -1px 1px 0px var(--button),
+            1px -1px 0px var(--button),
+            1px 0px 0px var(--button);
+    }
+
+    section.img-coffee {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .fundo-blur .blur-top {
+        position: absolute;
+        width: 312px;
+        height: 321px;
+        left: 1127px;
+        top: -63px;
+        background-color: #996dff;
+        filter: blur(400px);
+    }
+
+    main .fundo-blur .blur-bottom {
+        position: absolute;
+        width: 321px;
+        height: 321px;
+        left: -29px;
+        top: 428px;
+        background: #996dff;
+        filter: blur(400px);
+    }
+
+    body::-webkit-scrollbar {
+        width: 5px;             
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: rgb(7, 7, 7);        
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--button);  
+        border-radius: 8px;      
+    }
+
+    footer {
+        display: none;
+    }
 }
 
-header nav {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-    margin: 0 auto;  
-}
+@media (max-width: 768px) {
+    header {
+        margin-top: 32px;
+    }
+    .nav-desk{
+        display: none;
+    }
 
+    .main-desk {
+        display: none;
+    }
 
-header nav .nav-links a {
-    margin: 0 30px;
-    text-transform: none;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0.02em;
-    justify-content: space-between;
-}
+    header .nav-mobile {
+        border-bottom: 1px solid var(--border-menu-mobile);
+        padding-bottom: 24px;
+    }
 
-header nav .nav-links a:hover {
-    text-decoration: underline;
-}
+    .nav-mobile .container-nav {
+        display: flex;
+        justify-content: space-around;
+    }
 
-header nav .btn-coffee button {
-    text-align: center;
-    width: 172px;
-    height: 37px;
-    border: 1px solid var(--button);
-    box-sizing: border-box;
-    border-radius: 6px;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    position: relative;
-    z-index: 1000;
-    background-color: transparent;
-}
+    header .nav-mobile .container-nav .logo-mobile {
+        position: relative;
+        margin-left: -32px;
+    }
 
-header nav .btn-coffee button:hover {
-    background-color: var(--button);
-}
+    main .main-mobile .text-mobile {
+        margin-top: 80px;
+    }
 
-section.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 40px;
-}
+    main .main-mobile .text-mobile p {
+        font-size: 30px;
+        line-height: 41px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
 
-section.text .text1 {
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 109px;
-    letter-spacing: -0.03em;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+    main .main-mobile .btn-coffee {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
 
-section.text .text2 {
-    color: var(--backgrond);
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 109px;
-    letter-spacing: -0.03em;
-    text-shadow: 
-        -1px -1px 0px var(--button),
-        -1px 1px 0px var(--button),
-        1px -1px 0px var(--button),
-        1px 0px 0px var(--button)
-}
+    main .main-mobile .btn-coffee button {
+        text-align: center;
+        width: 172px;
+        height: 37px;
+        border: 1px solid var(--button);
+        box-sizing: border-box;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        position: relative;
+        z-index: 1000;
+        background-color: transparent;
+        align-items: center;
+    }
 
-section.img-coffee {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    main .main-mobile .btn-coffee a button {
+        text-decoration: none;
+    }
 
-main .fundo-blur .blur-top {
-    position: absolute;
-    width: 312px;
-    height: 321px;
-    left: 1127px;
-    top: -63px;
-    background-color: #996dff;
-    filter: blur(400px);
-}
+    main .main-mobile section {
+        text-align: center;
+        margin-top: 80px;
+    }
 
-main .fundo-blur .blur-bottom {
-    position: absolute;
-    width: 321px;
-    height: 321px;
-    left: -29px;
-    top: 428px;
-    background: #996dff;
-    filter: blur(400px);
-}
+    main .main-mobile section.text .text1 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 68px;
+        letter-spacing: -0.03em;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
-body::-webkit-scrollbar {
-    width: 5px;             
-}
-  
-body::-webkit-scrollbar-track {
-    background: rgb(7, 7, 7);        
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: var(--button);  
-    border-radius: 8px;      
+    main .main-mobile section.text .text2 {
+        color: var(--backgrond);
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 68px;
+        letter-spacing: -0.03em;
+        text-shadow: 
+            -1px -1px 0px var(--button),
+            -1px 1px 0px var(--button),
+            1px -1px 0px var(--button),
+            1px 0px 0px var(--button);
+    }
+
+    section.img-coffee {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .main-mobile .fundo-blur {
+        position: absolute;
+        width: 321px;
+        height: 321px;
+        left: 38px;
+        top: 570px;
+        background-color: #996dff;
+        filter: blur(400px);
+        z-index: 9999999999;
+        display: flex;
+    }
+
+    footer .modal-menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 115vh;
+        z-index: 99999999999999;
+        background-color: var(--backgrond);
+        top: 95px;
+    }
+
+    footer .modal-menu.active {
+        display: block !important;
+    }
+
+    footer .modal-menu ul {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--text-color-menu-mobile);
+    }
+
+    footer .modal-menu ul li {
+        padding: 15px 0;
+        padding-left: 24px;
+        border-bottom: 1px solid var(--border-menu-mobile);
+    }
+
+    footer .modal-menu ul li:active {
+        border-left: 3px solid var(--button);
+    }
 }
